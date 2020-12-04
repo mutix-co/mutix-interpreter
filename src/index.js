@@ -184,6 +184,7 @@ function frameLooper() {
   window.requestAnimationFrame(frameLooper);
 
   $('#microphone img').attr('src', mute);
+  $('#interpreter')[0].muted = isMute;
 
   Mousetrap.bind('space', () => handleToggleMicrophone());
   Mousetrap.bind('enter', () => handleToggleMicrophone());
