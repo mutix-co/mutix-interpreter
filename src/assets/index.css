@@ -1,0 +1,29 @@
+body {
+  background-color: #131313;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+form > div {
+  width: 50%;
+}
+
+audio {
+  display: none;
+}
+
+select {
+  border: none;
+  background-color: #131313;
+  color: #fff;
+}
+
+.waveform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
