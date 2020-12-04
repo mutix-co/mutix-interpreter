@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpreter</title>
+  </head>
+  <body>
+    <div class="player">
+      <audio id="site" autoplay controls></audio>
+      <audio id="interpreter" autoplay controls></audio>
+    </div>
+    <fieldset class="site">
+      <legend>講者</legend>
+      <form>
+        <div>
+          <label>現場原音：</label>
+          <select id="site-in" class="audio-inputs"></select>
+        </div>
+        <div>
+          <label>口譯耳機：</label>
+          <select id="site-out" class="audio-outputs"></select>
+        </div>
+      </form>
+      <div class="waveform"></div>
+    </fieldset>
+    <fieldset class="interpreter">
+      <legend>會眾</legend>
+      <form>
+        <div>
+          <label>口譯麥克風：</label>
+          <select id="interpreter-in" class="audio-inputs"></select>
+        </div>
+        <div>
+          <label>現場收聽：</label>
+          <select id="interpreter-out" class="audio-outputs"></select>
+        </div>
+      </form>
+      <div class="waveform">
+        <a id="microphone" class="microphone" href="#">
+          <img src="" alt="microphone" />
+        </a>
+      </div>
+    </fieldset>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
