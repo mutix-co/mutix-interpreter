@@ -32,14 +32,15 @@ $('#site-in').on('change', async (evt) => {
 });
 
 async function handleSiteOutChange(deviceId) {
-  $('#site')[0].setSinkId(deviceId);
+  await $('#site')[0].setSinkId(deviceId);
+  console.log(`Site played on ${deviceId}`);
 }
 
 $('#site-out').on('change', async (evt) => {
   const { value } = evt.target;
   if (value === '') return;
   window.localStorage.setItem('site-out', value);
-  handleSiteOutChange();
+  handleSiteOutChange(value);
 });
 
 async function handleInterpreterInChange(deviceId) {
@@ -61,6 +62,7 @@ $('#interpreter-in').on('change', async (evt) => {
 
 async function handleInterpreterOutChange(deviceId) {
   $('#interpreter')[0].setSinkId(deviceId);
+  console.log(`Interpreter played on ${deviceId}`);
 }
 
 $('#interpreter-out').on('change', async (evt) => {
