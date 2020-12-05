@@ -16,6 +16,10 @@ fieldset {
   margin: 20px;
 }
 
+audio {
+  display: none;
+}
+
 select {
   border: none;
   background-color: #131313;

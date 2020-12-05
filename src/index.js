@@ -21,7 +21,7 @@ async function handleSiteInChange(deviceId) {
   const source = context.createMediaStreamSource(stream);
   siteAnalyser = context.createAnalyser();
   source.connect(siteAnalyser);
-  siteAnalyser.connect(context.destination);
+  // siteAnalyser.connect(context.destination);
   console.log(`Site in on ${deviceId}`);
 }
 
@@ -51,7 +51,7 @@ async function handleInterpreterInChange(deviceId) {
   const source = context.createMediaStreamSource(stream);
   interpreterAnalyser = context.createAnalyser();
   source.connect(interpreterAnalyser);
-  interpreterAnalyser.connect(context.destination);
+  // interpreterAnalyser.connect(context.destination);
   console.log(`Interpreter in on ${deviceId}`);
 }
 
