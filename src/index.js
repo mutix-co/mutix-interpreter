@@ -22,6 +22,7 @@ async function handleSiteInChange(deviceId) {
   siteAnalyser = context.createAnalyser();
   source.connect(siteAnalyser);
   siteAnalyser.connect(context.destination);
+  console.log(`Site in on ${deviceId}`);
 }
 
 $('#site-in').on('change', async (evt) => {
@@ -51,6 +52,7 @@ async function handleInterpreterInChange(deviceId) {
   interpreterAnalyser = context.createAnalyser();
   source.connect(interpreterAnalyser);
   interpreterAnalyser.connect(context.destination);
+  console.log(`Interpreter in on ${deviceId}`);
 }
 
 $('#interpreter-in').on('change', async (evt) => {
